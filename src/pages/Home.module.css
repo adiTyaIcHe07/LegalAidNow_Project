@@ -1,0 +1,96 @@
+/*
+ *  Key Change: We are moving the vertical padding from the .container
+ *  to the sections themselves. This gives us precise control over the
+ *  space between sections.
+*/
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem; /* CHANGED: Removed top/bottom padding here */
+  text-align: center;
+}
+
+/* Hero Section */
+.heroSection {
+  background-color: var(--light-bg-color);
+  padding: 2.5rem 0; /* CHANGED: Added vertical padding here */
+}
+.heroSection h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.heroSection p {
+  font-size: 1.1rem;
+  color: var(--light-text-color);
+  max-width: 600px;
+  margin: 0 auto 1.5rem auto;
+}
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.primaryButton, .secondaryButton {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+.primaryButton {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+.primaryButton:hover {
+  background-color: var(--primary-hover);
+  text-decoration: none;
+}
+.secondaryButton {
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+.secondaryButton:hover {
+  background-color: #f8f9fa;
+  text-decoration: none;
+}
+
+/* How It Works Section */
+.howItWorksSection {
+  background-color: var(--white-color);
+  padding: 2.5rem 0; /* CHANGED: Added vertical padding here */
+}
+.howItWorksSection h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.stepsGrid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.stepCard {
+  border: 1px solid var(--border-color);
+  padding: 2rem;
+  border-radius: 8px;
+}
+.stepNumber {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+.stepCard h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .stepsGrid {
+    grid-template-columns: 1fr;
+  }
+}
