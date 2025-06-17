@@ -151,49 +151,61 @@ Opens at: `http://localhost:5173`
 
 ---
 
-## 📂 Folder Structure
-
 ## 📁 Project Folder Structure
 
 ```
-LegalAidNow_Project/
-├── legalaidnow-backend/               # Spring Boot Backend
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── java/
-│   │   │   │   └── com/
-│   │   │   │       └── legalaidnow/
-│   │   │   │           ├── controller/        # REST API Controllers (LawyerController, RequestController)
-│   │   │   │           ├── model/             # Entity Classes (Lawyer.java, Request.java)
-│   │   │   │           ├── repository/        # JPA Repositories (LawyerRepository, RequestRepository)
-│   │   │   │           └── LegalAidNowApplication.java # Main application
-│   │   │   └── resources/
-│   │   │       ├── application.properties     # Database & CORS config
-│   │   │       └── static/                    # (Optional) Static files
-│   ├── pom.xml                                # Maven dependencies
-│   └── README.md                              # Backend info (optional)
+🖥️ Backend (legalaidnow-backend)
+legalaidnow-backend/
+└── src/
+    └── main/
+        ├── java/
+        │   └── com/legalaidnow/backend/
+        │       ├── LegalaidnowBackendApplication.java
+        │       ├── config/
+        │       │   └── WebConfig.java             # Global CORS config
+        │       ├── controller/
+        │       │   ├── LawyerController.java
+        │       │   └── RequestController.java
+        │       ├── dto/
+        │       │   └── StatusUpdateRequest.java
+        │       ├── entity/
+        │       │   ├── Lawyer.java
+        │       │   └── Request.java
+        │       ├── repository/
+        │       │   ├── LawyerRepository.java
+        │       │   └── RequestRepository.java
+        │       └── service/
+        │           ├── LawyerService.java
+        │           └── RequestService.java
+        └── resources/
+            └── application.properties
 
-├── legalaidnow-frontend/              # React Frontend
-│   ├── public/
-│   │   └── index.html                 # Entry HTML
-│   ├── src/
-│   │   ├── assets/                    # Icons, images, etc.
-│   │   ├── components/                # Reusable components (e.g., Navbar, LawyerCard)
-│   │   ├── pages/                     # Page components (Home, RegisterLawyer, PostRequest, etc.)
-│   │   ├── services/                  # Axios API calls (lawyerService.js, requestService.js)
-│   │   ├── App.css
-│   │   ├── App.jsx
-│   │   ├── index.css
-│   │   └── main.jsx
-│   ├── .env                           # Environment variable (API base URL)
-│   ├── package.json                   # Project metadata & dependencies
-│   ├── vite.config.js                 # Vite config
-│   └── README.md                      # Frontend info (optional)
 
-├── .gitignore                         # Git ignored files
-├── LICENSE                            # Project license
-└── README.md                          # Master README file
+🌐 Frontend (legalaidnow-frontend-css)
+legalaidnow-frontend-css/
+└── src/
+    ├── assets/
+    ├── components/
+    │   ├── Footer.jsx
+    │   └── Navbar.jsx
+    ├── pages/
+    │   ├── About.jsx
+    │   ├── BrowseLawyers.jsx
+    │   ├── BrowseRequests.jsx
+    │   ├── Contact.jsx
+    │   ├── Home.jsx
+    │   ├── LawyerRegister.jsx
+    │   ├── PostRequest.jsx
+    │   └── UserDashboard.jsx
+    ├── services/
+    │   └── apiService.js        # Centralized Axios calls
+    ├── utils/
+    │   └── localStorage.js      # Utility for localStorage access (optional)
+    ├── App.jsx
+    ├── index.css
+    └── main.jsx
 ```
+
 
 ## 📄 License
 
