@@ -153,39 +153,47 @@ Opens at: `http://localhost:5173`
 
 ## 📂 Folder Structure
 
-### 🌐 Frontend (`legalaidnow-frontend`)
+## 📁 Project Folder Structure
 
-```bash
-📦 legalaidnow-frontend/
-├── 📁 public/
-├── 📁 src/
-│   ├── 📁 assets/
-│   ├── 📁 components/
-│   ├── 📁 pages/
-│   ├── 📁 services/
-│   ├── 🎨 App.css
-│   ├── ⚛️ App.jsx
-│   ├── 🎨 index.css
-│   └── 🚀 main.jsx
-├── 📄 package.json
-├── ⚙️ vite.config.js
-└── 📝 README.md
 ```
+LegalAidNow_Project/
+├── legalaidnow-backend/               # Spring Boot Backend
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   │   └── com/
+│   │   │   │       └── legalaidnow/
+│   │   │   │           ├── controller/        # REST API Controllers (LawyerController, RequestController)
+│   │   │   │           ├── model/             # Entity Classes (Lawyer.java, Request.java)
+│   │   │   │           ├── repository/        # JPA Repositories (LawyerRepository, RequestRepository)
+│   │   │   │           └── LegalAidNowApplication.java # Main application
+│   │   │   └── resources/
+│   │   │       ├── application.properties     # Database & CORS config
+│   │   │       └── static/                    # (Optional) Static files
+│   ├── pom.xml                                # Maven dependencies
+│   └── README.md                              # Backend info (optional)
 
-### 🖥️ Backend (`legalaidnow-backend`)
+├── legalaidnow-frontend/              # React Frontend
+│   ├── public/
+│   │   └── index.html                 # Entry HTML
+│   ├── src/
+│   │   ├── assets/                    # Icons, images, etc.
+│   │   ├── components/                # Reusable components (e.g., Navbar, LawyerCard)
+│   │   ├── pages/                     # Page components (Home, RegisterLawyer, PostRequest, etc.)
+│   │   ├── services/                  # Axios API calls (lawyerService.js, requestService.js)
+│   │   ├── App.css
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── .env                           # Environment variable (API base URL)
+│   ├── package.json                   # Project metadata & dependencies
+│   ├── vite.config.js                 # Vite config
+│   └── README.md                      # Frontend info (optional)
 
-```bash
-📦 legalaidnow-backend/
-├── 📁 src/
-│   ├── 📁 main/
-│   │   ├── 📁 java/
-│   │   │   └── 📁 com/legalaidnow/backend/
-│   │   └── 📁 resources/
-│   │       └── 📄 application.properties
-├── 📄 pom.xml
+├── .gitignore                         # Git ignored files
+├── LICENSE                            # Project license
+└── README.md                          # Master README file
 ```
-
----
 
 ## 📄 License
 
