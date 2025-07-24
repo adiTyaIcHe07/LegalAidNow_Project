@@ -1,15 +1,13 @@
-version: "3.8"
-
 services:
   mysql:
     image: mysql:8
     container_name: legalaidnow-mysql-db
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: '@diMySQL'
-      MYSQL_DATABASE: legalaid_db
-      MYSQL_USER: user
-      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     ports:
       - "3308:3306"
     volumes:
@@ -32,9 +30,9 @@ services:
       mysql:
         condition: service_healthy
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://legalaidnow-mysql-db:3306/legalaid_db
-      SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: '@diMySQL'
+      SPRING_DATASOURCE_URL: ${SPRING_DATASOURCE_URL}
+      SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
     networks:
       - legalaidnow-net
 
