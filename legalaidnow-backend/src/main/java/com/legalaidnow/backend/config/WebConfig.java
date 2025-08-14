@@ -14,7 +14,6 @@ public class WebConfig implements WebMvcConfigurer {
                         "http://localhost:3001",
                         "http://localhost:5173",
                         "http://localhost",               // Docker frontend default
-                        "http://handyhub-react-frontend", // Docker Compose container name
                         "http://127.0.0.1:3000"
                 )
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")

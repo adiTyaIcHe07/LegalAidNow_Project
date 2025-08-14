@@ -1,8 +1,8 @@
-version: '3.8'
-
 services:
   backend:
-    build: ./legalaidnow-backend
+    build:
+      context: ./legalaidnow-backend
+      dockerfile: Dockerfile
     container_name: legalaidnow-spring-backend
     ports:
       - "8081:8080"
@@ -10,11 +10,15 @@ services:
       SPRING_DATASOURCE_URL: ${SPRING_DATASOURCE_URL}
       SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME}
       SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     networks:
       - legalaid-net
 
   frontend:
-    build: ./legalaidnow-frontend
+    build:
+      context: ./legalaidnow-frontend
+      dockerfile: Dockerfile
     container_name: legalaidnow-react-frontend
     ports:
       - "3001:80"
