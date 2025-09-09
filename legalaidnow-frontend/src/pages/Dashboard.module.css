@@ -1,0 +1,97 @@
+.pageContainer {
+  background-color: var(--light-bg-color);
+  padding: 3rem 2rem;
+  min-height: 100%;
+}
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.header h1 {
+  font-size: 2rem;
+}
+.header a, .header button {
+  background-color: var(--success-color);
+  color: var(--white-color);
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.header a:hover, .header button:hover {
+  background-color: var(--success-hover);
+  text-decoration: none;
+}
+.card {
+  background-color: var(--white-color);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.cardTitle {
+  padding: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--border-color);
+}
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+.listItem:last-child {
+  border-bottom: none;
+}
+.status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 0.25rem;
+}
+.statusPending {
+  background-color: #fff3cd;
+  color: #664d03;
+}
+.statusSolved {
+  background-color: #d1e7dd;
+  color: #0f5132;
+}
+.actions button {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  margin-left: 1rem;
+}
+.actions button:hover {
+  text-decoration: underline;
+}
+
+.actions .deleteButton {
+    color: #dc3545;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 1rem;
+    font-weight: 500;
+}
+.actions .deleteButton:hover {
+    text-decoration: underline;
+}

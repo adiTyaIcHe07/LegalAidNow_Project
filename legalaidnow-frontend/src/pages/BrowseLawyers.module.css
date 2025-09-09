@@ -1,0 +1,103 @@
+:root {
+  --card-blue: #3b82f6;
+  --card-green: #22c55e;
+}
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  justify-content: center;
+}
+.filters select, .filters input {
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  min-width: 250px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+.card {
+  background-color: var(--white-color);
+  border: 1px solid var(--border-color);
+  border-left: 5px solid var(--card-green);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+.card h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--dark-text-color);
+}
+.expertise {
+  font-weight: 700;
+  color: var(--card-green);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+.infoSection {
+  margin-top: auto;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+}
+.infoSection p {
+  margin: 0.5rem 0;
+  color: var(--light-text-color);
+}
+.infoSection strong {
+  color: var(--dark-text-color);
+}
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.contactButton {
+  flex-grow: 1;
+  padding: 0.75rem;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+.contactButton:hover {
+    background-color: var(--primary-hover);
+}
+.deleteButton {
+  padding: 0.75rem;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.deleteButton:hover {
+  background-color: #dc3545;
+}

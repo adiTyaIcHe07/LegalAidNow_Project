@@ -1,0 +1,277 @@
+/* Home.module.css */
+
+/* Define custom properties for colors if they aren't already defined globally */
+:root {
+  --primary-green: #38c172; /* Example green from the image */
+  --light-gray-text: #666; /* Example light text color */
+  --dark-text: #333;
+  --white-color: #ffffff;
+  --light-bg-color: #f8f8f8; /* Overall very light gray background */
+  --subtle-gray-curve: #f0f0f0; /* New: Very light gray for the curve */
+  --button-hover-dark: #555; /* Darker hover for primary button */
+  --button-hover-light: #e0e0e0; /* Lighter hover for secondary button */
+}
+
+.homePage {
+  font-family: Arial, sans-serif; /* Example font */
+  overflow: hidden; /* Important for the curved shape */
+  position: relative; /* For positioning absolute elements if needed */
+  min-height: 100vh; /* Ensure it takes full viewport height for demo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-bg-color); /* Overall light background */
+}
+
+.designShowcase {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align items vertically */
+  max-width: 1400px; /* Adjust as needed */
+  margin: 0 auto;
+  padding: 4rem 2rem; /* Vertical padding for the section */
+  position: relative;
+  width: 100%;
+  box-sizing: border-box; /* Include padding in width */
+  z-index: 1; /* Ensure content is above any pseudo-elements */
+}
+
+/* Pseudo-element for the large white/gray curved background */
+.designShowcase::after {
+  content: '';
+  position: absolute;
+  top: -50px; /* Adjust to move curve up */
+  right: -200px; /* Adjust to move curve more to the right */
+  bottom: -50px; /* Adjust to move curve down */
+  width: 70%; /* Control the width of the white curve */
+  background-color: var(--subtle-gray-curve); /* CHANGED: Using new subtle gray variable */
+  border-bottom-left-radius: 50% 50%; /* Large elliptical border-radius for the curve */
+  border-top-left-radius: 50% 50%; /* Large elliptical border-radius for the curve */
+  z-index: 0; /* Behind the content */
+  transform: translateX(20%); /* Fine-tune position */
+}
+
+
+.textContainer {
+  flex: 1;
+  padding-right: 4rem; /* Space between text and image */
+  text-align: left;
+  z-index: 2; /* Ensure text is above the curve */
+}
+
+.experienceText {
+  font-size: 0.9rem;
+  color: var(--primary-green);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.mainHeading {
+  /* ADJUSTED ONLY THESE PROPERTIES TO PREVENT OVERLAP */
+  font-size: 3.0rem; /* Slightly reduced font size for better fit */
+  font-weight: 800;
+  color: var(--dark-text);
+  line-height: 1.2; /* Adjusted line height for better stacking of multi-line text */
+  margin-bottom: 1.5rem; /* KEPT THIS SPACING THE SAME AS PER YOUR REQUEST */
+}
+
+.mainHeading .highlight {
+  color: var(--primary-green);
+}
+
+.descriptionText {
+  font-size: 1rem;
+  color: var(--light-gray-text);
+  line-height: 1.6;
+  margin-bottom: 2rem; /* KEPT THIS SPACING THE SAME AS PER YOUR REQUEST */
+  max-width: 550px; /* Control paragraph width */
+}
+
+/* Button Group Styling */
+.buttonGroup {
+  display: flex;
+  gap: 1rem; /* Space between buttons */
+  margin-bottom: 2rem; /* KEPT THIS SPACING THE SAME AS PER YOUR REQUEST */
+}
+
+.primaryButton, .secondaryButton {
+  display: inline-block;
+  padding: 0.9rem 2.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+.primaryButton {
+  background-color: var(--dark-text); /* Black background */
+  color: var(--white-color);
+  border: 1px solid var(--dark-text); /* Consistent border */
+}
+
+.primaryButton:hover {
+  background-color: var(--button-hover-dark);
+  border-color: var(--button-hover-dark);
+}
+
+.secondaryButton {
+  background-color: var(--white-color); /* White background */
+  color: var(--dark-text); /* Black text */
+  border: 1px solid var(--dark-text); /* Black border */
+}
+
+.secondaryButton:hover {
+  background-color: var(--button-hover-light);
+  color: var(--dark-text);
+  border-color: var(--dark-text);
+}
+
+
+.footerNav {
+  margin-top: 5rem; /* KEPT THIS SPACING THE SAME AS PER YOUR REQUEST */
+  display: flex;
+  justify-content: space-between; /* Space out social links and pagination */
+  align-items: center;
+  position: relative; /* For the social links underline */
+}
+
+.socialLinks {
+  display: flex;
+  gap: 0.75rem; /* Space between social links and separators */
+  align-items: center;
+}
+
+.socialLink {
+  color: var(--light-gray-text);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative; /* For the hover underline effect */
+  padding-bottom: 3px; /* Space for underline */
+}
+
+.socialLink::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--primary-green);
+  transition: width 0.3s ease-in-out;
+}
+
+.socialLink:hover::after {
+  width: 100%;
+}
+
+.separator {
+  color: var(--light-gray-text);
+  font-size: 0.85rem;
+}
+
+/* Pagination is removed */
+
+.imageContainer {
+  flex: 1;
+  min-height: 600px; /* Adjust height of the image container */
+  /* background-image is set inline in Home.jsx */
+  background-size: cover;
+  background-position: center 20%; /* Adjusted slightly to better show the statue */
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 2; /* Ensure image is above the curve */
+  margin-left: -10%; /* Pull image slightly into the curve area */
+  border-top-left-radius: 200px; /* Example for a subtle curve on the image itself */
+  border-bottom-left-radius: 200px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  overflow: hidden; /* Crucial to contain the image within its rounded shape */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .mainHeading {
+    font-size: 2.8rem; /* Adjusted for smaller screens too */
+  }
+  .designShowcase {
+    padding: 3rem 1.5rem;
+  }
+  .textContainer {
+    padding-right: 2rem;
+  }
+  .designShowcase::after {
+    width: 80%;
+    right: -150px;
+  }
+  .buttonGroup {
+    flex-direction: column; /* Stack buttons on smaller screens if they get too wide */
+    align-items: flex-start; /* Align stacked buttons to the left */
+  }
+}
+
+@media (max-width: 768px) {
+  .designShowcase {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+  .textContainer {
+    padding-right: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .mainHeading {
+    font-size: 2.2rem; /* Adjusted for even smaller screens */
+  }
+  .descriptionText {
+    max-width: 100%;
+  }
+  .buttonGroup {
+    justify-content: center; /* Center buttons when stacked on very small screens */
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-direction: row; /* Try to keep them in a row if space allows */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+  }
+  .primaryButton, .secondaryButton {
+    width: auto; /* Allow buttons to size naturally */
+    min-width: 150px; /* Ensure a minimum width */
+  }
+  .imageContainer {
+    min-height: 400px;
+    width: 100%;
+    margin-left: 0;
+    border-radius: 20px; /* Simpler border-radius for mobile */
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .footerNav {
+    flex-direction: column;
+    margin-top: 3rem;
+    gap: 1.5rem;
+  }
+  .socialLinks {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .designShowcase::after {
+    content: none; /* Hide the large curve on smaller screens for better layout */
+  }
+}
+
+@media (max-width: 480px) {
+  .mainHeading {
+    font-size: 1.8rem; /* Adjusted for very small screens */
+  }
+  .primaryButton, .secondaryButton {
+    padding: 0.7rem 1.8rem;
+    font-size: 0.85rem;
+  }
+  .buttonGroup {
+    flex-direction: column; /* Force stack buttons on very small screens */
+  }
+}

@@ -1,0 +1,11 @@
+com/legalaidnow/backend/LegalaidnowBackendApplication.class
+com/legalaidnow/backend/repository/RequestRepository.class
+com/legalaidnow/backend/controller/LawyerController.class
+com/legalaidnow/backend/repository/LawyerRepository.class
+com/legalaidnow/backend/entity/Request.class
+com/legalaidnow/backend/dto/StatusUpdateRequest.class
+com/legalaidnow/backend/config/WebConfig.class
+com/legalaidnow/backend/controller/RequestController.class
+com/legalaidnow/backend/entity/Lawyer.class
+com/legalaidnow/backend/service/RequestService.class
+com/legalaidnow/backend/service/LawyerService.class

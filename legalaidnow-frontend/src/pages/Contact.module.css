@@ -1,0 +1,113 @@
+.pageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  min-height: 80vh; /* Make the section taller */
+  /* NEW: Add a subtle gradient background */
+  background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+
+.contactBox {
+  background-color: var(--white-color);
+  padding: 3rem 4rem; /* Increase padding for a larger look */
+  border-radius: 12px; /* A more modern border radius */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* A stronger shadow */
+  max-width: 900px; /* Make the box wider */
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem; /* Larger title */
+  font-weight: 800; /* Bolder font */
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--light-text-color);
+  margin-bottom: 4rem; /* More space below the subtitle */
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem; /* More space between items */
+  text-align: left;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  gap: 1.5rem;
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 50px; /* Larger icon circle */
+  height: 50px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-color); /* White icon color */
+  box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3);
+}
+
+.icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.detailItem h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.25rem;
+  color: var(--dark-text-color);
+}
+
+.detailItem p, .detailItem a {
+  margin: 0;
+  color: var(--light-text-color);
+  font-size: 1rem;
+}
+
+.detailItem a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+.detailItem a:hover {
+    text-decoration: underline;
+}
+
+/* NEW: Social Media section styling */
+.socialSection {
+    border-top: 1px solid var(--border-color);
+    margin-top: 4rem;
+    padding-top: 2rem;
+}
+.socialSection h3 {
+    font-size: 1.5rem;
+    color: var(--dark-text-color);
+    margin-bottom: 1.5rem;
+}
+.socialIcons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.socialIcons a {
+    color: var(--secondary-color);
+    transition: transform 0.2s, color 0.2s;
+}
+.socialIcons a:hover {
+    transform: scale(1.2);
+    color: var(--primary-color);
+}
+.socialIcons svg {
+    width: 30px;
+    height: 30px;
+}

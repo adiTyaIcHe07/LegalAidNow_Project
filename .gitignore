@@ -1,0 +1,57 @@
+# ====================
+# Global ignores
+# ====================
+*.log
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+
+# Ignore IDEs/editors
+.vscode/
+.idea/
+*.iml
+
+# ====================
+# Node / React frontend
+# ====================
+frontend/node_modules/
+frontend/.env
+frontend/.env.*.local
+frontend/dist/
+frontend/build/
+frontend/.turbo/
+frontend/.next/
+frontend/.cache/
+
+# npm / yarn lock files if you use only one
+# frontend/package-lock.json
+# frontend/yarn.lock
+
+# ====================
+# Java / Spring Boot backend
+# ====================
+backend/target/
+backend/bin/
+backend/.classpath
+backend/.project
+backend/.settings/
+backend/.env
+backend/.mvn/
+backend/mvnw
+backend/mvnw.cmd
+
+# If using Gradle
+backend/build/
+backend/.gradle/
+backend/gradle-app.setting
+backend/gradlew
+backend/gradlew.bat
+
+# ====================
+# OS files
+# ====================
+.DS_Store
+*.bak
+*.tmp
+*.~*

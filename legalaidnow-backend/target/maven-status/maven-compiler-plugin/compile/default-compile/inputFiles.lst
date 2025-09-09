@@ -1,0 +1,11 @@
+/Users/adi_07/Desktop/LegalAidNow/legalaidnow-backend/src/main/java/com/legalaidnow/backend/LegalaidnowBackendApplication.java
+/Users/adi_07/Desktop/LegalAidNow/legalaidnow-backend/src/main/java/com/legalaidnow/backend/config/WebConfig.java
+/Users/adi_07/Desktop/LegalAidNow/legalaidnow-backend/src/main/java/com/legalaidnow/backend/controller/LawyerController.java
+/Users/adi_07/Desktop/LegalAidNow/legalaidnow-backend/src/main/java/com/legalaidnow/backend/controller/RequestController.java
+/Users/adi_07/Desktop/LegalAidNow/legalaidnow-backend/src/main/java/com/legalaidnow/backend/dto/StatusUpdateRequest.java
+/Users/adi_07/Desktop/LegalAidNow/legalaidnow-backend/src/main/java/com/legalaidnow/backend/entity/Lawyer.java
+/Users/adi_07/Desktop/LegalAidNow/legalaidnow-backend/src/main/java/com/legalaidnow/backend/entity/Request.java
+/Users/adi_07/Desktop/LegalAidNow/legalaidnow-backend/src/main/java/com/legalaidnow/backend/repository/LawyerRepository.java
+/Users/adi_07/Desktop/LegalAidNow/legalaidnow-backend/src/main/java/com/legalaidnow/backend/repository/RequestRepository.java
+/Users/adi_07/Desktop/LegalAidNow/legalaidnow-backend/src/main/java/com/legalaidnow/backend/service/LawyerService.java
+/Users/adi_07/Desktop/LegalAidNow/legalaidnow-backend/src/main/java/com/legalaidnow/backend/service/RequestService.java

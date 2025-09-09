@@ -1,0 +1,8 @@
+.footer {
+  background-color: #212529; /* A dark background color */
+  color: #adb5bd;          /* A light grey for the text */
+  text-align: center;
+  padding: 1.5rem 2rem;     /* Add some vertical and horizontal padding */
+  font-size: 0.9rem;        /* Make the text a bit smaller */
+  flex-shrink: 0;           /* Ensures the footer doesn't shrink */
+}
