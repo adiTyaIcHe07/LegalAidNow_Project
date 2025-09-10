@@ -1,31 +1,35 @@
+version: '3.8'
+
 services:
   backend:
-    build:
-      context: ./legalaidnow-backend
-      dockerfile: Dockerfile
+    build: ./legalaidnow-backend
     container_name: legalaidnow-spring-backend
     ports:
-      - "8081:8080"
+      - "9091:8081"
     environment:
-      SPRING_DATASOURCE_URL: ${SPRING_DATASOURCE_URL}
-      SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME}
-      SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
+      SPRING_APPLICATION_NAME: legalaidnow-backend
+      SERVER_PORT: 8081
+      SPRING_DATASOURCE_URL: jdbc:postgresql://host.docker.internal:5432/legalaidnow_db
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: '@diPostgresSQL'
+      JPA_HIBERNATE_DDL_AUTO: update
+      JPA_SHOW_SQL: "true"
+      JPA_DIALECT: org.hibernate.dialect.PostgreSQLDialect
     networks:
-      - legalaid-net
+      - legalaidnow-net
+    restart: unless-stopped
 
   frontend:
-    build:
-      context: ./legalaidnow-frontend
-      dockerfile: Dockerfile
+    build: ./legalaidnow-frontend
     container_name: legalaidnow-react-frontend
     ports:
-      - "3001:80"
+      - "4000:80"
     depends_on:
       - backend
     networks:
-      - legalaid-net
+      - legalaidnow-net
+    restart: unless-stopped
 
 networks:
-  legalaid-net:
+  legalaidnow-net:
+    driver: bridge

@@ -5,7 +5,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
 @SpringBootTest
-@ActiveProfiles("test") // This tells Spring to load application.properties from src/test/resources
+@ActiveProfiles("test")// This tells Spring to load application.properties from src/test/resources
 class LegalaidnowBackendApplicationTests {
 
 	@Test
