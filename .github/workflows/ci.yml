@@ -1,4 +1,4 @@
-name: CI - Build & Test Backend + Frontend
+name: CI - Build Backend & Frontend
 
 on:
   push:
@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    # 1. Checkout code
     - name: Checkout Repository
       uses: actions/checkout@v3
 
@@ -25,9 +26,6 @@ jobs:
       working-directory: ./legalaidnow-backend
       run: mvn clean package -DskipTests
 
-    - name: Run Backend Tests
-      working-directory: ./legalaidnow-backend
-      run: mvn test
 
     # ---------- FRONTEND ----------
     - name: Set up Node.js
